@@ -1,7 +1,9 @@
 module Wellspring
   class Entry < ActiveRecord::Base
+    extend FriendlyId
     include Wellspring::Concerns::Searchable
-
+    
+    friendly_id :title, use: :slugged
     scope :published, -> { where('published_at <= ?', Time.zone.now) }
 
     validates :title, presence: true
