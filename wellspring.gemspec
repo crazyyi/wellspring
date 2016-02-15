@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Wellspring::VERSION
   s.authors     = ["Piotr Chmolowski"]
   s.email       = ["piotr@chmolowski.pl"]
-  s.homepage    = "homepage"
+  s.homepage    = "https://github.com/crazyyi/wellspring"
   s.summary     = "Summary of Wellspring."
   s.description = "Description of Wellspring."
   s.license     = "MIT"
