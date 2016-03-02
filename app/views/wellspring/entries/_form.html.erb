@@ -8,7 +8,8 @@
       <%= f.input attr_name, as: attr_type %>
     <% end %>
 
-    <%= f.input :slug %>
+    <%= f.input :slug placeholder: "Enter a slug for SEO"%>
+    <%= f.input :all_tags, placeholder: "Tags separated with comma" %>
     <%= f.input :author_name %>
     <%= f.input :published_at %>
 
