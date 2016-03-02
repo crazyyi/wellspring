@@ -2,7 +2,6 @@ PATH
   remote: .
   specs:
     wellspring (0.0.1)
-      acts-as-taggable-on (~> 3.4)
       autoprefixer-rails
       bcrypt (~> 3.1.7)
       font-awesome-rails
@@ -52,8 +51,6 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    acts-as-taggable-on (3.5.0)
-      activerecord (>= 3.2, < 5)
     arel (6.0.3)
     autoprefixer-rails (6.3.3.1)
       execjs

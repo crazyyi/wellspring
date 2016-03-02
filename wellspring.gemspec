@@ -29,7 +29,6 @@ Gem::Specification.new do |s|
 
   s.add_dependency "pygments.rb"
   s.add_dependency "redcarpet"
-  s.add_dependency "acts-as-taggable-on", "~> 3.4"
 
   s.add_development_dependency "pg", "~> 0.18.4"
 end
