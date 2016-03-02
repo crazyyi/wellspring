@@ -1,8 +1,8 @@
 module Wellspring
   class Entry < ActiveRecord::Base
     include Wellspring::Concerns::Searchable
-    hasmany :taggings
-    hasmany :tags, through :taggings
+    has_many :taggings
+    has_many :tags, through :taggings
 
     scope :published, -> { where('published_at <= ?', Time.zone.now) }
 
@@ -18,7 +18,7 @@ module Wellspring
     def all_tags
       self.tags.map(&:name).join(", ")
     end
-    
+
     def self.content_attr(attr_name, attr_type = :string)
       content_attributes[attr_name] = attr_type
 
