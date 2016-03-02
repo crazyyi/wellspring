@@ -7,8 +7,8 @@ require "wellspring/version"
 Gem::Specification.new do |s|
   s.name        = "wellspring"
   s.version     = Wellspring::VERSION
-  s.authors     = ["Piotr Chmolowski"]
-  s.email       = ["piotr@chmolowski.pl"]
+  s.authors     = ["Aaron"]
+  s.email       = ["gdzack@gmail.com"]
   s.homepage    = "https://github.com/crazyyi/wellspring"
   s.summary     = "Summary of Wellspring."
   s.description = "Description of Wellspring."
@@ -29,6 +29,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "pygments.rb"
   s.add_dependency "redcarpet"
+  s.add_dependency "acts-as-taggable-on", "~> 3.4"
 
   s.add_development_dependency "pg", "~> 0.18.4"
 end

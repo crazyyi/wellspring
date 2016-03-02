@@ -1,12 +1,24 @@
 module Wellspring
   class Entry < ActiveRecord::Base
     include Wellspring::Concerns::Searchable
-    
+    hasmany :taggings
+    hasmany :tags, through :taggings
+
     scope :published, -> { where('published_at <= ?', Time.zone.now) }
 
     validates :title, presence: true
     validates :slug, uniqueness: { scope: :type, allow_blank: true }
 
+    def all_tags=(names)
+      self.tags = names.split(",").map do |name|
+        Tag.where(name: name.strip).first_or_create!
+      end
+    end
+
+    def all_tags
+      self.tags.map(&:name).join(", ")
+    end
+    
     def self.content_attr(attr_name, attr_type = :string)
       content_attributes[attr_name] = attr_type
 
